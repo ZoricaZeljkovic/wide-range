@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;900&display=swap');
+
+:root {
+    --fontFamily: 'Source Sans Pro', sans-serif;
+    --accents: #3e86d8;
+    --primary: #333333;
+    --white: #fff;
+    --lightgray: #fafafa;
+    --borders: #eaeaea;
+    --text: rgba(0, 0, 0, .8)
+    --fontSize: 16px;
+    --transition: .3s ease;
+}
+/* basic styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fontFamily);
+    background: var(--accents);
+    color: var(--text);
+    padding: 0 20px 50px 20px;
+    font-size: var(--fontSize);
+    line-height: 1.6;
+}
+.container {
+    width: 65%;
+    margin: 0 auto;
+}
+ul {
+    list-style: none;
+}
+a:hover {
+    transition: var(--transition);
+}
+
+/* header */
+header {
+    background-image: url(img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header article {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav {
+    background: var(--accents);
+    padding: 20px 0;
+}
+.logo {
+    background: rgba(0, 0, 0, .8);
+    color: var(--white);
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 3.3rem;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 30px;
+}
+.logo span {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+}
+header .icons a {
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-left: 30px;
+}
+header .icons a:hover {
+    color: var(--accents);
+}
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+header nav ul li a {
+    color: var(--white);
+    opacity: .6;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header nav ul li a:hover {
+    color: var(--white);
+    opacity: 1;
+}
+/* services */
+.services {
+    background: var(--white);
+    padding: 100px 0;
+}
+.services .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.services .container div {
+    flex: 0 0 24%;
+}
+.services .container div img {
+    width: 100%;
+}
+.services p {
+    text-align: left;
+}
+
+.services p,
+.blog p {
+    line-height: 1.8;
+}
+.services h3,
+.blog h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+/* blog */
+
+.blog {
+    padding: 100px 0;
+    background: var(--lightgray);
+    border-top: 1px solid var(--borders);
+    text-align: center;
+}
+.blog .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    justify-content: space-between;
+}
+.blog .container div {
+    flex: 0 0 23%;
+}
+.blog h2 {
+    font-weight: 300;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.blog h4 {
+    color: #4b4b4b;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+button {
+    background: var(--accents);
+    color: var(--white);
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin-top: 30px;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+button:hover {
+    background: var(--primary);
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding-top: 50px;
+}
+footer a {
+    color: var(--primary);
+    transition: var(--transition);
+}
+footer a:hover {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* responsive*/
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+    header article {
+        flex-direction: column;
+    }
+    header .icons a {
+        margin: 10px;
+    }
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .services {
+        padding: 50px 0;
+    }
+    .services .container div {
+        flex: 0 0 100%;
+    }
+    .services h3 {
+        margin-top: 40px;
+    }
+    .blog {
+        padding: 50px 0;
+    }
+    .blog .container div {
+        flex: 0 0 100%;
+    }
+    .blog h2 {
+        font-size: 2.3rem;
+    }
+    button {
+        margin-bottom: 30px;  
+    }
+}
